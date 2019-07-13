@@ -41,11 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactory.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="ConcreteFactory1.cs" />
+    <Compile Include="ConcreteProductA1.cs" />
+    <Compile Include="ConcreteProductA2.cs" />
+    <Compile Include="ConcreteProductB1.cs" />
+    <Compile Include="ConcreteProductB2.cs" />
+    <Compile Include="ProductA.cs" />
+    <Compile Include="ProductB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Compile Include="ConcreteFactory2.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

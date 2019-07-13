@@ -10,6 +10,10 @@ namespace AbstractFactory
     {
         static void Main(string[] args)
         {
+            var client = new Client(new ConcreteFactory1());
+            client.PrintTypes();
+            client = new Client(new ConcreteFactory2());
+            client.PrintTypes();
         }
     }
 }
