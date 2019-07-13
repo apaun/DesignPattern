@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Builder.cs" />
+    <Compile Include="ConcreteBuilder2.cs" />
     <Compile Include="ConcreteDirector.cs" />
     <Compile Include="ConcreteBuilder.cs" />
     <Compile Include="Director.cs" />

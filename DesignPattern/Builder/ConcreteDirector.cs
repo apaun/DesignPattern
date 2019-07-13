@@ -22,7 +22,7 @@ namespace Builder
 
         public override Product GetProduct()
         {
-            return _builder.GetProduct();
+            return _builder.GetResult();
         }
     }
 }

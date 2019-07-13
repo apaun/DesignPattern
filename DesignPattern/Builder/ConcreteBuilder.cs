@@ -21,7 +21,7 @@ namespace Builder
             _prouduct.Property2 = "Product Property 2";
         }
 
-        public override Product GetProduct()
+        public override Product GetResult()
         {
             return _prouduct;
         }

@@ -10,6 +10,6 @@ namespace Builder
     {
         public abstract void BuildPart();
 
-        public abstract Product GetProduct();
+        public abstract Product GetResult();
     }
 }

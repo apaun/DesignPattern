@@ -10,11 +10,16 @@ namespace Builder
     {
         static void Main(string[] args)
         {
-            var builder = new ConcreteBuilder();
-            var director = new ConcreteDirector(builder);
+            Builder builder = new ConcreteBuilder(); // VehicleBuilder - HeroHonda Builder
+            var director = new ConcreteDirector(builder); // Shop
             director.Construct();
-            var finalProduct = director.GetProduct();
+            var finalProduct = director.GetProduct(); // The final vehicle
             finalProduct.ShowInfo();
+
+            director = new ConcreteDirector(new ConcreteBuilder2());
+            director.Construct();
+            director.GetProduct().ShowInfo();
+
         }
     }
 }
