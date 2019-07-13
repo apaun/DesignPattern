@@ -1,0 +1,14 @@
+C:\Users\abhij\Desktop\Codes\WpfApp\UiElements\bin\Debug\UiElements.dll.config
+C:\Users\abhij\Desktop\Codes\WpfApp\UiElements\bin\Debug\UiElements.dll
+C:\Users\abhij\Desktop\Codes\WpfApp\UiElements\bin\Debug\UiElements.pdb
+C:\Users\abhij\Desktop\Codes\WpfApp\UiElements\obj\Debug\UiElements.csprojResolveAssemblyReference.cache
+C:\Users\abhij\Desktop\Codes\WpfApp\UiElements\obj\Debug\App.baml
+C:\Users\abhij\Desktop\Codes\WpfApp\UiElements\obj\Debug\SomeCustomWindow.baml
+C:\Users\abhij\Desktop\Codes\WpfApp\UiElements\obj\Debug\App.g.cs
+C:\Users\abhij\Desktop\Codes\WpfApp\UiElements\obj\Debug\SomeCustomWindow.g.cs
+C:\Users\abhij\Desktop\Codes\WpfApp\UiElements\obj\Debug\UiElements_MarkupCompile.cache
+C:\Users\abhij\Desktop\Codes\WpfApp\UiElements\obj\Debug\UiElements.g.resources
+C:\Users\abhij\Desktop\Codes\WpfApp\UiElements\obj\Debug\UiElements.Properties.Resources.resources
+C:\Users\abhij\Desktop\Codes\WpfApp\UiElements\obj\Debug\UiElements.csproj.GenerateResource.Cache
+C:\Users\abhij\Desktop\Codes\WpfApp\UiElements\obj\Debug\UiElements.dll
+C:\Users\abhij\Desktop\Codes\WpfApp\UiElements\obj\Debug\UiElements.pdb
