@@ -10,6 +10,8 @@ namespace Singleton
     {
         static void Main(string[] args)
         {
+            var singltonIntance = Singleton.Instance;
+            Console.WriteLine(singltonIntance.GetType().ToString());
         }
     }
 }
