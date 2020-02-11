@@ -12,15 +12,15 @@ namespace DynamicProgramming
         {
             var memo = new int[number + 1];
 
-            memo[0] = 1;
+            memo[0] = 0;
             memo[1] = 1;
 
-            for (int i = 2; i <= number + 1; i++)
+            for (int i = 2; i < number + 1; i++)
             {
                 memo[i] = memo[i - 1] + memo[i - 2];
             }
            
-            return memo[number + 1];
+            return memo[number];
         }
     }
 }
