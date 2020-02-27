@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Subsets
 {
@@ -17,12 +18,16 @@ namespace Subsets
 
                 Console.WriteLine();
             }
+
         }
+
+
+
 
         private static List<List<int>> PrintSets(int[] set)
         {
             var result = new List<List<int>>();
-            for (uint i = 0; i < Math.Pow(2, set.Length); i++)
+            for (int i = 0; i < Math.Pow(2, set.Length); i++)
             {
                 var temp = new List<int>();
                 for (int j = 0; j < set.Length; j++)

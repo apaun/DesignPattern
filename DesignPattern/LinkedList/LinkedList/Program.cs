@@ -14,6 +14,10 @@ namespace LinkedList
             head.PrintList();
             Console.WriteLine("Length of Linked list : " + head.Length());
             Console.WriteLine("Middle Node : " + head.GetMiddle());
+
+            head = head.Reverse(head);
+            Console.WriteLine("After Reverse : ");
+            head.PrintList();
         }
     }
 }

@@ -82,5 +82,25 @@ namespace LinkedList
             Console.WriteLine();
         }
 
+        public LinkedList Reverse(LinkedList node)
+        {
+            if (node == null)
+                return null;
+
+            LinkedList prev = null;
+            LinkedList curr = node;
+
+            while (curr != null)
+            {
+                var next = curr.Next;
+                curr.Next = prev;
+                prev = curr;
+                curr = next;
+            }
+
+            return prev;
+
+        }
+
     }
 }
