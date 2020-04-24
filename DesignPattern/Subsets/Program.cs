@@ -8,7 +8,7 @@ namespace Subsets
     {
         static void Main(string[] args)
         {
-            var result = PrintSetsDfs(new[] { 1, 2, 3 });
+            var result = PrintSetsDfs(new[] {1, 1, 2, 3 });
             foreach (var res in result)
             {
                 foreach (var i in res)
@@ -26,6 +26,9 @@ namespace Subsets
             result.Add(new List<int>(temp));
             for(int i = start; i < nums.Length; i++)
             {
+                if (i > start && nums[i] == nums[i - 1])
+                    continue;
+
                 temp.Add(nums[i]);
                 Dfs(nums, i + 1, temp, result);
                 temp.RemoveAt(temp.Count - 1);
@@ -37,11 +40,7 @@ namespace Subsets
             var result = new List<IList<int>>();
             Dfs(set, 0, new List<int>(), result);
             return result;
-
         }
-
-
-
 
         private static List<List<int>> PrintSets(int[] set)
         {
