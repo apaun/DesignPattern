@@ -9,7 +9,17 @@ namespace Subsets
         static void Main(string[] args)
         {
             var result = PrintSetsDfs(new[] {1, 1, 2, 3 });
-            foreach (var res in result)
+
+            //Print(result);
+
+            Print(Permute(new[] { 1, 1, 2, 3 }));
+
+
+        }
+
+        private static void Print(IList<IList<int>> list)
+        {
+            foreach (var res in list)
             {
                 foreach (var i in res)
                 {
@@ -18,7 +28,50 @@ namespace Subsets
 
                 Console.WriteLine();
             }
+        }
 
+        private static List<IList<int>> Permute(int[] nums)
+        {
+            var res = new List<IList<int>>();
+            Permute(nums, 0, res);
+            return res;
+        }
+
+        private static void Permute(int[] nums, int l, List<IList<int>> result)
+        {
+            if(l == nums.Length - 1)
+            {
+                result.Add(new List<int>(nums));
+            }
+            else
+            {
+                for(int i = l; i < nums.Length; i++)
+                {
+                    if(ShouldSwap(nums, l, i))
+                    {
+                        int temp = nums[i];
+                        nums[i] = nums[l];
+                        nums[l] = temp;
+                        Permute(nums, l + 1, result);
+                        temp = nums[i];
+                        nums[i] = nums[l];
+                        nums[l] = temp;
+                    }
+                   
+
+                }
+            }
+        }
+
+        private static bool ShouldSwap(int[] nums, int l, int i)
+        {
+            for(int a = l; a < i; a++)
+            {
+                if (nums[a] == nums[i])
+                    return false;
+            }
+
+            return true;
         }
 
         private static void Dfs(int[] nums, int start, List<int> temp, List<IList<int>> result)
