@@ -19,8 +19,6 @@ namespace BinarySearch
 
             var rotatedArray = new int[] { 4, 5, 6, 8, 9, 0, 1, 2 };
             Console.WriteLine(FindPivotInRotatedArray(rotatedArray));
-
-
         }
 
         private static int FindPivotInRotatedArray(int[] arr)
@@ -36,9 +34,7 @@ namespace BinarySearch
                 else
                     r = mid;
             }
-
             return l;
-
         }
 
         private static int BinarySearch(int[] arr, int num)
@@ -84,9 +80,7 @@ namespace BinarySearch
 
                 if (arr[mid] == num)
                     idx = mid;
-
             }
-
             return idx;
         }
 
@@ -110,10 +104,7 @@ namespace BinarySearch
                 if (arr[mid] == num)
                     idx = mid;
             }
-
-
             return idx;
-
         }
     }
 }

@@ -104,7 +104,6 @@ namespace Sorting
             return i;
         }
 
-
         private static void InsertionSort(int[] arr)
         {
             int i = 0, j = 0, key = 0;

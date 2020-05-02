@@ -49,30 +49,27 @@ namespace DynamicProgramming
 
         public static int CalculateChange(int[] coin, int value)
         {
-            int[,] t = new int[coin.Length + 1, value + 1];
 
-            for (int i = 0; i <= coin.Length; i++)
+            Array.Sort(coin);
+
+            int[] dp = new int[value + 1];
+            dp[0] = 0;
+
+            for(int i = 1; i <= value; i++)
             {
-                for (int j = 0; j <= value; j++)
+                dp[i] = int.MaxValue;
+                for(int j = 0; j < coin.Length; j++)
                 {
-                    if (i == 0 || j == 0)
-                        t[i, j] = 0;
-                    else if (i == 1)
+                    var pre = i - coin[j];
+                    if(pre >= 0 && dp[pre] != int.MaxValue)
                     {
-                        t[i, j] = j / coin[i - 1];
-                    }
-                    else if (coin[i - 1] > j)
-                    {
-                        t[i, j] = t[i - 1, j];
-                    }
-                    else
-                    {
-                        t[i, j] = Math.Min(t[i - 1, j], 1 + t[i, j - coin[i - 1]]);
+                        dp[i] = Math.Min(dp[i], dp[pre] + 1);
                     }
                 }
             }
 
-            return t[coin.Length, value];
+
+            return dp[value] == int.MaxValue ? -1 : dp[value];
 
         }
     }
